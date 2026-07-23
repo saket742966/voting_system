@@ -1,15 +1,4 @@
-candidates = [
-    "Candidate A",
-    "Candidate B",
-    "Candidate C"
-]
-
-votes = {
-    "Candidate A": 0,
-    "Candidate B": 0,
-    "Candidate C": 0
-}
-
+from voting import *
 
 while True :
     print("\n" + "=" * 50)
@@ -24,7 +13,7 @@ while True :
     choice = int(input("Enter your choice: "))
 
     if choice == 1 :
-        print("View Candidates Selected")
+        view_candidates()
         
     elif choice == 2 :
         print("Cast Vote Selected")
