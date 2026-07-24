@@ -19,7 +19,7 @@ while True :
         cast_vote()
         
     elif choice == 3 :
-        view_results()
+        print("View Results Selected")
         
     elif choice == 4 :
         print("Exiting ... ")

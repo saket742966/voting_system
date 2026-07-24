@@ -10,8 +10,6 @@ votes = {
     "Candidate C": 0
 }
 
-
-
 def view_candidates():
     print("\n" + "=" * 50)
     print(" " * 17 + "CANDIDATES")
@@ -19,9 +17,7 @@ def view_candidates():
     
     for index, candidate in enumerate(candidates, start = 1):
         print(f"{index}. {candidate}")
-
-
-
+    
 def cast_vote():
     print("\n" + "=" * 50)
     print(" " * 17 + "CAST VOTE")
@@ -49,18 +45,3 @@ def cast_vote():
     votes[selected_candidate] += 1
 
     print(f"\nVote cast successfully for {selected_candidate}!")
-    
-    
-
-def view_results():
-    print("\n" + "=" * 50)
-    print(" " * 17 + "VOTING RESULTS")
-    print("=" * 50)
-
-    print()
-
-    for candidate in votes:
-        print(f"{candidate:<20} : {votes[candidate]}")
-
-    print("\n" + "=" * 50)
-    
