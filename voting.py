@@ -45,3 +45,27 @@ def cast_vote():
     votes[selected_candidate] += 1
 
     print(f"\nVote cast successfully for {selected_candidate}!")
+    
+
+
+def view_results():
+    print("\n" + "=" * 50)
+    print(" " * 17 + "VOTING RESULTS")
+    print("=" * 50)
+
+    print()
+
+    highest_votes = -1
+    winner = ""
+
+    for candidate in votes:
+        print(f"{candidate:<20} : {votes[candidate]}")
+
+        if votes[candidate] > highest_votes:
+            highest_votes = votes[candidate]
+            winner = candidate
+
+    print("\n" + "-" * 50)
+    print(f"Winner              : {winner}")
+    print(f"Votes                : {highest_votes}")
+    print("-" * 50)
