@@ -18,3 +18,30 @@ def view_candidates():
     for index, candidate in enumerate(candidates, start = 1):
         print(f"{index}. {candidate}")
     
+def cast_vote():
+    print("\n" + "=" * 50)
+    print(" " * 17 + "CAST VOTE")
+    print("=" * 50)
+
+    print()
+
+    for index, candidate in enumerate(candidates, start=1):
+        print(f"{index}. {candidate}")
+
+    while True:
+        try:
+            choice = int(input("\nEnter candidate number: "))
+
+            if choice < 1 or choice > len(candidates):
+                print("Invalid candidate number. Please try again.")
+            else:
+                break
+
+        except ValueError:
+            print("Please enter a valid number.")
+
+    selected_candidate = candidates[choice - 1]
+
+    votes[selected_candidate] += 1
+
+    print(f"\nVote cast successfully for {selected_candidate}!")

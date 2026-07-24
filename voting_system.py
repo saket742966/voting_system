@@ -16,7 +16,7 @@ while True :
         view_candidates()
         
     elif choice == 2 :
-        print("Cast Vote Selected")
+        cast_vote()
         
     elif choice == 3 :
         print("View Results Selected")
